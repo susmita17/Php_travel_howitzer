@@ -28,8 +28,7 @@ end
 Then(/^I should see error message "([^"]*)"$/) do |error_message|
 Php_Login_Page.on do 
 	
-	#{ expect(text).to include() }
-		#check if text is matching to what you want
+	
 	expect(result_text).to eql error_message
 	
 

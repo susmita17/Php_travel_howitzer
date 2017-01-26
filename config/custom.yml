@@ -1,0 +1,17 @@
+ 
+###########################################################
+# APPLICATION SETTINGS                                    #
+###########################################################
+
+ app_protocol: http
+ app_host: phptravels.net
+ driver: selenium
+ selenium_browser: ff
+ debug_mode: true
+
+ # inputs for Signup form
+ app_test_firstname: Tom
+ app_test_lastname: Riddle
+ app_test_mobile: 123456789
+ app_test_email: test@xyz.com
+ app_test_password: 123456789

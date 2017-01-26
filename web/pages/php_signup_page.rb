@@ -1,5 +1,6 @@
 require_relative 'Base_Page'
 class Php_signup_page < Base_Page
+
 path './register'
  
   validate :title, /^Register$/
@@ -14,19 +15,25 @@ path './register'
   element :signup_button,    :xpath,".//*[@id='headersignupform']/div[9]/button"
   element  :message,   :xpath,"html/body/div[3]/div[1]/div/div[1]/h3"
 
-   def login()
-    firstname_element.set "Tom";
-    lastname_element.set "Riddle";
-    mobile_element.set "666666";
-    email_element.set "tom.riddle@milop.com";
-    password_element.set "motelddiR";
-    confirm_password_element.set "motelddiR";    
-    signup_button_element.click
-  end  
   
-  def get_message()
 
-  message_element.text
-  end	
+def login()
+    firstname_element.set Howitzer.app_test_firstname
+    lastname_element.set Howitzer.app_test_lastname
+    mobile_element.set Howitzer.app_test_mobile
+    email_element.set Howitzer.app_test_email
+    password_element.set Howitzer.app_test_password
+    confirm_password_element.set Howitzer.app_test_password 
+    signup_button_element.click
 
 end
+
+def get_message()
+
+  message_element.text
+  end 
+
+end
+ 
+  
+  

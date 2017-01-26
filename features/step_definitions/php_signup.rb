@@ -16,9 +16,7 @@ end
 end
 
 When(/^I register with valid credentials$/) do
-  Php_signup_page.on do |variable|
-  	login
-  end
+  Php_signup_page.given.login
 end
 
 Then(/^I should see message "([^"]*)"$/) do |message|

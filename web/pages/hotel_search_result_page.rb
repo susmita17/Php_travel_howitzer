@@ -5,6 +5,13 @@ validate :title, /Search/
 
 #element :hotel_list,:xpath,"//div[@class='itemscontainer']//table//tr//h4//b"
 element :hotel_name_link , :xpath,"html/body/div[5]/div[3]/div/table/tbody/tr[1]/td/div/div[2]/div/div[1]/a/button"
+element :hotel_list,:xpath,"//div[@class='itemscontainer']//table//tr//h4//b"
+element :result,:xpath,"//div[@class='itemscontainer']//table"
+
+
+def result_text()
+	result_element.text
+end
 
 def click_hotel_link
 	hotel_name_link_element.click

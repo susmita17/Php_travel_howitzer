@@ -1,7 +1,9 @@
 # Hotel information
 
 Then(/^I should see hotels in Pune, which include "([^"]*)"$/) do |arg1|
- # pending # Write code here that turns the phrase above into concrete actions
+Hotel_search_result_page.on do
+ expect(result_text).to include(arg1)
+end
 end
 
 Then(/^I click on Hotel details link$/) do

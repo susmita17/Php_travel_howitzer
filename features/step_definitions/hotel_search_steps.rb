@@ -1,4 +1,6 @@
-
+Given(/^I goto PHP_Travel site$/) do
+  Base_Page.open
+end
 
 Given(/^I click on Hotels link on navigation bar$/) do
   Base_Page.on  do 
@@ -16,9 +18,10 @@ When(/^I click search button$/) do
 end
 
 Then(/^I should see hotels in Pune, which include "([^"]*)","([^"]*)"$/) do |arg1, arg2|
-  #Hotel_search_result_page.given.writeName
+ 
   Hotel_search_result_page.on do
-  Capybara:Hotel_search_result_page.has_content?('Hyatt')
+  
+expect(result_text).to include(arg1,arg2)
 end
 
 end
